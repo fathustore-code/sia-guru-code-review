@@ -5,6 +5,7 @@ type TeacherMenuId =
       | 'leave'
         | 'account'
           | 'my-schedule'
+| 'schedule-documents'
 
           type TeacherNavigationProps = {
             onSelect: (menu: TeacherMenuId) => void
