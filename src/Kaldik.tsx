@@ -79,7 +79,7 @@ type AcademicYear = {
                                                                                                     const canManage = ['admin', 'principal'].includes(role.toLowerCase())
 
                                                                                                       const [year, setYear] = useState<AcademicYear | null>(null)
-                                                                                                        const [years, setYears] = useState<AcademicYear[]>([])
+                                                                                                        
                                                                                                           const [events, setEvents] = useState<CalendarEvent[]>([])
                                                                                                             const [hijriDates, setHijriDates] = useState<HijriDate[]>([])
                                                                                                               const [selectedMonth, setSelectedMonth] = useState(new Date().getMonth())
@@ -127,7 +127,7 @@ type AcademicYear = {
                                                                                                                                                                                                                                                           const loadedYears = (yearResult.data || []) as AcademicYear[]
                                                                                                                                                                                                                                                               const activeYear = loadedYears.find(item => item.is_active) || loadedYears[0] || null
 
-                                                                                                                                                                                                                                                                  setYears(loadedYears)
+                                                                                                                                                                                                                                                                  
                                                                                                                                                                                                                                                                       setYear(activeYear)
                                                                                                                                                                                                                                                                           setEvents((eventResult.data || []) as CalendarEvent[])
                                                                                                                                                                                                                                                                               setHijriDates((hijriResult.data || []) as HijriDate[])
